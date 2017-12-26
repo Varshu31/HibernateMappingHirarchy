@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+		<property name="hbm2ddl.auto">create-drop</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mapping</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- <mapping class="com.scp.crud.studentCrud.StudentClass" /> -->
+		<!--For Table-per-class -->
+		<!--<mapping class="com.scp.hibernateInheritance.Person" /> 
+		<mapping class="com.scp.hibernateInheritance.Customer"/> 
+		<mapping class="com.scp.hibernateInheritance.Employee" /> -->
+		<!--For Table-per-subclass -->
+		<!--<mapping class="com.scp.hibernateInheritance.Person_Sub" /> 
+		<mapping class="src/main/java/com/scp/OneToMany/OneToManyPkB.java""com.scp.hibernateInheritance.Customer_Sub" /> 
+		<mapping class="com.scp.hibernateInheritance.Employee_Sub"/> -->
+		<!--For Table-per-concrete <mapping class="com.scp.hibernateInheritance.Person_Concrete" /> 
+		<mapping class="com.scp.hibernateInheritance.Customer_Concrete" /> 
+		<mapping class="com.scp.hibernateInheritance.Employee_Concrete" /> -->
+
+		<!--For One-To-One Unidirectional Mapping with JoinTable -->
+		<!-- <mapping class="com.scp.OneToOne.Company_JTU" /> 
+		<mapping class="com.scp.OneToOne.Department_JTU"/> 
+		 -->
+		<!--For One-To-One Unidirectional Mapping with JoinColumn -->
+		<!-- <mapping class="com.scp.OneToOne.Company_JCU" />
+		<mapping class="com.scp.OneToOne.Department_JCU" /> -->	
+			
+		<!-- For One-To-One Unidirectional Mapping with Primarykey  -->
+		 <!-- <mapping class="com.scp.OneToOne.Company_PKB" />
+		<mapping class="com.scp.OneToOne.Department_PKB" /> -->
+		
+		<!--For One-To-One Bidirectional Mapping with JoinColumn  -->
+		<!-- <mapping class="com.scp.OneToOne.Company_JCB" />
+		<mapping class="com.scp.OneToOne.Department_JCB" /> -->
+		
+		<!--For One-To-One Bidirectional Mapping with JoinTable -->
+		<!-- <mapping class="com.scp.OneToOne.Company_JTB" />
+		<mapping class="com.scp.OneToOne.Department_JTB" /> -->  
+		
+		<!--For One-To-One Bidirectional Mapping with primarykey -->
+		<!-- <mapping class="com.scp.onetoone.Company_PKB" />
+		<mapping class="com.scp.onetoone.Department_PKB" /> -->
+		
+		<!--For One-To-Many Unidirectional Mapping with JoinColumn -->
+		<!--  <mapping class="com.scp.OneToMany.CompanyOTM_JCU" />
+		<mapping class="com.scp.OneToMany.DepartmentOTM_JCU" />   -->
+		
+		<!--For One-To-Many Unidirectional Mapping with JoinTable -->
+		 <!--  <mapping class="com.scp.OneToMany.CompanyOTM_JTU" />
+		 <mapping class="com.scp.OneToMany.DepartmentOTM_JTU" />  -->
+		 
+		  <!--For One-To-Many Unidirectional Mapping with Primarykey -->
+		  <!-- <mapping class="com.scp.OneToMany.CompanyOTM_PKU" />
+		  <mapping class="com.scp.OneToMany.DepartmentOTM_PKU" />   --> 
+		 
+		  <!--For One-To-Many Bidirectional Mapping with JoinColumn -->
+		 <!-- <mapping class="com.scp.OneToMany.CompanyOTM_JCB" />
+		 <mapping class="com.scp.OneToMany.DepartmentOTM_JCB" /> -->  
+		 		 
+		 <!--For One-To-Many Bidirectional Mapping with JoinTable -->
+		<!-- <mapping class="com.scp.OneToMany.CompanyOTM_JTB" />
+		 <mapping class="com.scp.OneToMany.DepartmentOTM_JTB" />  -->
+		 
+		 <!--For One-To-Many Bidirectional Mapping with Primarykey -->
+		<!--   <mapping class="com.scp.OneToMany.CompanyOTM_PKB" />
+		 <mapping class="com.scp.OneToMany.DepartmentOTM_PKB" />  --> 
+		 
+		  
+		 <!--For Many-To-One Unidirectional Mapping with JoinColumn -->
+			<!-- <mapping class="com.scp.ManyToOne.CompanyMTO_JCU" />
+		 	<mapping class="com.scp.ManyToOne.DepartmentMTO_JCU" />    -->
+		 	 
+		 <!--For Many-To-One Unidirectional Mapping with JoinTable -->
+			<!-- <mapping class="com.scp.ManyToOne.CompanyMTO_JTU" />
+		 	<mapping class="com.scp.ManyToOne.DepartmentMTO_JTU" />    -->
+		 	
+		 <!--For Many-To-One Unidirectional Mapping with primarykey -->
+			<!-- <mapping class="com.scp.ManyToOne.CompanyMTO_PKU" />
+		 	<mapping class="com.scp.ManyToOne.DepartmentMTO_PKU" />  -->
+		 			 	 
+		 <!--For Many-To-One Bidirectional Mapping with JoinColumn -->
+			<!-- <mapping class="com.scp.ManyToOne.CompanyMTO_JCB" />
+		 	<mapping class="com.scp.ManyToOne.DepartmentMTO_JCB" />  -->
+		 	
+		 <!--For Many-To-One Bidirectional Mapping with JoinTable -->
+			 <mapping class="com.scp.ManyToOne.CompanyMTO_JTB" />
+		 	<mapping class="com.scp.ManyToOne.DepartmentMTO_JTB" /> 
+		 	
+		 <!--For Many-To-One Bidirectional Mapping with primarykey -->
+			 <!-- <mapping class="com.scp.ManyToOne.CompanyMTO_PKB" />
+		 	<mapping class="com.scp.ManyToOne.DepartmentMTO_PKB" /> -->
+		
+		<!--For Many-To-Many Unidirectional Mapping with join Table -->
+		   <!--  <mapping class="com.scp.ManyToMany.CompanyMTM_JTU" />
+		 	<mapping class="com.scp.ManyToMany.DepartmentMTM_JTU" />  -->
+		 		 	
+		 <!--For Many-To-Many Unidirectional Mapping with join column -->
+			  <!-- <mapping class="com.scp.ManyToMany.CompanyMTM_JCU" />
+		 	<mapping class="com.scp.ManyToMany.DepartmentMTM_JCU" />    
+		 	  -->
+		 <!--For Many-To-Many Unidirectional Mapping with primarykey -->
+			 <!-- <mapping class="com.scp.ManyToMany.CompanyMTM_PKU" />
+		 	<mapping class="com.scp.ManyToMany.DepartmentMTM_PKU" /> --> 
+		 	
+		 <!--For Many-To-Many Unidirectional Mapping with primarykey -->
+			<!-- <mapping class="com.scp.ManyToMany.CompanyMTM_PKB" />
+		 	<mapping class="com.scp.ManyToMany.DepartmentMTM_PKB" />   -->
+		 	
+		 <!--For Many-To-Many Unidirectional Mapping with join column -->
+			<!-- <mapping class="com.scp.ManyToMany.CompanyMTM_JCB" />
+		 	<mapping class="com.scp.ManyToMany.DepartmentMTM_JCB" /> -->
+		 	
+		 <!--For Many-To-Many Unidirectional Mapping with jointable -->
+			<!-- <mapping class="com.scp.ManyToMany.CompanyMTM_JTB" />
+		 	<mapping class="com.scp.ManyToMany.DepartmentMTM_JTB" /> --> 
+
+</session-factory>
+</hibernate-configuration>
